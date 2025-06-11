@@ -1,0 +1,53 @@
+---
+import "../styles/global.css";
+import amsed from '../assets/logo-amsed.png';
+import asadero from '../assets/logo-asadero.png';
+import fofel from '../assets/logo-fofel.png';
+import metamedix from '../assets/logo-metamedix.png';
+---
+
+
+<div class="overflow-hidden whitespace-nowrap bg-gray-100 py-4">
+    <div class="scrolling-logos inline-block whitespace-nowrap">
+      <img src={amsed.src} alt="amsed" class="logo" />
+      <img src={metamedix.src} alt="metamedix" class="logo"/>
+      <img src={fofel.src} alt="fofel" class="logo"/>
+      <img src={asadero.src} alt="asadero" class="logo"/>
+      <!-- Repite para que se vea continuo -->
+      <img src={amsed.src} alt="amsed" class="logo" />
+      <img src={metamedix.src} alt="metamedix" class="logo"/>
+      <img src={fofel.src} alt="fofel" class="logo"/>
+      <img src={asadero.src} alt="asadero" class="logo"/>
+
+      <img src={amsed.src} alt="amsed" class="logo" />
+      <img src={metamedix.src} alt="metamedix" class="logo"/>
+      <img src={fofel.src} alt="fofel" class="logo"/>
+      <img src={asadero.src} alt="asadero" class="logo"/>
+
+      <img src={amsed.src} alt="amsed" class="logo" />
+      <img src={metamedix.src} alt="metamedix" class="logo"/>
+      <img src={fofel.src} alt="fofel" class="logo"/>
+      <img src={asadero.src} alt="asadero" class="logo"/>
+    </div>
+  </div>
+</div>
+  <style>
+    .scrolling-logos {
+      animation: scroll-left 20s linear infinite;
+    }
+
+    .logo {
+      height: 100px;
+      display: inline-block;
+      margin: 0 20px;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>

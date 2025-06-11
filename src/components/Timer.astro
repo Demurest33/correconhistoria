@@ -1,0 +1,81 @@
+---
+import '../styles/global.css'
+---
+
+<div class="flex items-center justify-center">
+  <div class="text-center">
+    <h1 class="text-4xl font-bold mb-4">¡La Carrera está por comenzar!</h1>
+    <p class="text-lg mb-6">Inicia el 11 de Octubre del 2025</p>
+    
+    <div id="countdown" class="text-2xl font-mono flex border-2 border-gray-600 justify-evenly">
+        <div class="flex flex-col">
+            <span id="days" class="px-2">00</span>
+            <span>Días</span>
+        </div>
+
+        <div class="flex flex-col">
+            <span id="hours" class="px-2">00</span>
+            <span>Horas</span>
+        </div>  
+        
+        <div class="flex flex-col">
+            <span id="minutes" class="px-2">00</span>
+            <span>Minutos</span>
+        </div>  
+        
+        <div class="flex flex-col">
+            <span id="seconds" class="px-2">00</span>
+            <span>Segundos</span>
+        </div>  
+    </div>
+  </div>
+</div>    
+
+<!-- ajustar el reloj si la carrera inicia el 11 de Octubre del 2025 -->
+
+<script>
+    const countdownDate = new Date('2025-10-11T00:00:00').getTime();
+    
+    const updateCountdown = () => {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+    
+        if (distance < 0) {
+        const countdownElement = document.getElementById('countdown');
+        if (countdownElement) {
+            countdownElement.innerHTML = "¡La Carrera ha comenzado!";
+        }
+        return;
+        }
+    
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+        const daysElement = document.getElementById('days');
+        const hoursElement = document.getElementById('hours');
+        const minutesElement = document.getElementById('minutes');
+        const secondsElement = document.getElementById('seconds');
+
+        if (daysElement) {
+            daysElement.textContent = String(days).padStart(2, '0');
+        }
+
+        if (hoursElement) {
+            hoursElement.textContent = String(hours).padStart(2, '0');
+        }
+
+        if (minutesElement) {
+            minutesElement.textContent = String(minutes).padStart(2, '0');
+        }
+
+        if (secondsElement) {
+            secondsElement.textContent = String(seconds).padStart(2, '0');
+        }
+
+
+    };
+    
+    setInterval(updateCountdown, 1000);
+</script>
