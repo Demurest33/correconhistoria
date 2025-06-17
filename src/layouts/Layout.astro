@@ -1,9 +1,5 @@
 ---
 import "../styles/global.css";
-import Navbar from '../components/Navbar.astro';
-import famlia from '../assets/familia.png';
-import Sponsors from "../components/sponsors.astro";
-import Timer from "../components/Timer.astro";
 ---
 
 <html lang="es">
@@ -11,34 +7,12 @@ import Timer from "../components/Timer.astro";
     <meta charset="UTF-8" />
     <title>Inicio - Carrera</title>
   </head>
-  <body class="pt-16"> <!-- padding top para dejar espacio a la navbar fija -->
-    <Navbar />
-    <main class="p-16">
-      <section>
-		<!-- dividir en 2 columnas -->
 
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-		  <div class="flex flex-col justify-center">
-			<h1 class="text-2xl font-bold">Corre con historia</h1>
-			<p class="mt-2 text-gray-700">Una carrera para toda la familia. Conectando el cuerpo con nuestras raíces.</p>
-			<button class="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-				Inscríbete ahora
-			</button>	
-		  </div>
-		  <div>
-			<img src={famlia.src} alt="Familia" class="w-full h-auto rounded-lg shadow-lg" />
-		  </div>
-		</div>
-	  </section>
-
-	  <section>
-		<Sponsors />
-	  </section>
-
-	  <section>
-		<Timer />
-	  </section>
-	  
+  <!-- background: linear-gradient(90deg, #d50e77 0%, #0d56b1 100%) -->
+  <!-- bg-[url('/correconhistoria/img/banner.jpg')] bg-cover bg-center -->
+  <body class="" style="background: linear-gradient(90deg, #d50e77 0%, #0d56b1 100%);">
+    <main class="px-16">
+      <slot />
 	</main>
   </body>
 </html>

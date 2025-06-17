@@ -4,50 +4,62 @@ import amsed from '../assets/logo-amsed.png';
 import asadero from '../assets/logo-asadero.png';
 import fofel from '../assets/logo-fofel.png';
 import metamedix from '../assets/logo-metamedix.png';
+import Image from "astro/components/Image.astro";
+const logos = [amsed, metamedix, fofel, asadero];
 ---
-
-
-<div class="overflow-hidden whitespace-nowrap bg-gray-100 py-4">
-    <div class="scrolling-logos inline-block whitespace-nowrap">
-      <img src={amsed.src} alt="amsed" class="logo" />
-      <img src={metamedix.src} alt="metamedix" class="logo"/>
-      <img src={fofel.src} alt="fofel" class="logo"/>
-      <img src={asadero.src} alt="asadero" class="logo"/>
-      <!-- Repite para que se vea continuo -->
-      <img src={amsed.src} alt="amsed" class="logo" />
-      <img src={metamedix.src} alt="metamedix" class="logo"/>
-      <img src={fofel.src} alt="fofel" class="logo"/>
-      <img src={asadero.src} alt="asadero" class="logo"/>
-
-      <img src={amsed.src} alt="amsed" class="logo" />
-      <img src={metamedix.src} alt="metamedix" class="logo"/>
-      <img src={fofel.src} alt="fofel" class="logo"/>
-      <img src={asadero.src} alt="asadero" class="logo"/>
-
-      <img src={amsed.src} alt="amsed" class="logo" />
-      <img src={metamedix.src} alt="metamedix" class="logo"/>
-      <img src={fofel.src} alt="fofel" class="logo"/>
-      <img src={asadero.src} alt="asadero" class="logo"/>
-    </div>
-  </div>
+<div class="sponsor-ticker">
+  <ul>
+    {logos.map((logo) => (
+      <li><Image src={logo} alt="sponsor" class="logo" /></li>
+    ))}
+  </ul>
+  <ul aria-hidden="true">
+    {logos.map((logo) => (
+      <li><Image src={logo} alt="sponsor" class="logo" /></li>
+    ))}
+  </ul>
 </div>
-  <style>
-    .scrolling-logos {
-      animation: scroll-left 20s linear infinite;
-    }
 
-    .logo {
-      height: 100px;
-      display: inline-block;
-      margin: 0 20px;
-    }
+<style>
+  .sponsor-ticker {
+    --gap: 3rem;
+    overflow: hidden;
+    display: flex;
+    gap: var(--gap);
+    padding-block: 1rem;
+    background-color: white;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+    user-select: none;
+  }
 
-    @keyframes scroll-left {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
+  .sponsor-ticker ul {
+    display: flex;
+    gap: var(--gap);
+    flex-shrink: 0;
+    min-width: 100%;
+    animation: scroll 10s linear infinite;
+    align-items: center;
+  }
+
+  /* .sponsor-ticker:hover ul {
+    animation-play-state: paused;
+  } */
+
+  .logo {
+    max-height: 300px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    margin-right: var(--gap);
+  }
+
+  .logo:hover {
+    opacity: 1;
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
     }
-  </style>
+  }
+</style>

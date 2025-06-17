@@ -1,11 +1,60 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import "../styles/global.css";
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import famlia from '../assets/familia.png';
+import Sponsors from "../components/sponsors.astro";
+import Timer from "../components/Timer.astro";
+import Navbar from '../components/Navbar.astro';
+import Socials from "../components/Socials.astro";
+import Hero from '../assets/hero.png';
 ---
 
 <Layout>
-	<Welcome />
+	<section>
+		<Navbar/>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 p-0 ">
+		  <div class="flex flex-col justify-center items-center ">
+
+			<div class=" flex flex-col self-end w-4/5">
+				<h1 class="text-8xl font-bold m-0 text-border"> 
+					<span style="color: #ff398f">Corre</span> 
+					<span style="color: #00bec1">con</span> 
+					<span class="text-9xl ml-8" style="color: #016692;">HISTORIA</span>
+				</h1>
+
+				<p class="mt-2 text-4xl text-center text-white font-medium">Una carrera para toda la familia. Conectando el cuerpo con nuestras raíces.</p>
+				<button style="background-color: #0192a3" class="mt-5 p-3 text-white rounded-3xl max-w-xs" >
+					<p class="text-3xl font-medium">Inscríbete ahora</p>
+				</button>	
+			</div>
+
+		  </div>
+		  <div>
+			<img src={Hero.src} alt="Familia" class="max-w-full w-2xl max-h-full" />
+		  </div>
+		</div>
+
+
+	  </section>
 </Layout>
+
+<section>
+	<Sponsors />
+</section>
+
+<section>
+	<Timer />
+</section>
+
+<section>
+	<Socials />
+</section>
+
+
+<style>
+	.text-border {
+		text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+               1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+	}
+</style>

@@ -2,67 +2,82 @@
 import "../styles/global.css";
 ---
 
-<nav class="bg-white fixed top-0 w-7xl z-50 max-md:w-100">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16 items-center">
-        <!-- <div class="flex-shrink-0 text-xl font-bold text-blue-600">
-          Carrera
-        </div> -->
-        <!-- Menu Desktop -->
-        <div class="hidden md:flex space-x-8">
-          <a href="#" class="text-gray-800 hover:text-blue-600">INICIO</a>
-          <a href="#" class="text-gray-800 hover:text-blue-600">LA CARRERA</a>
-          <a href="#" class="text-gray-800 hover:text-blue-600">INSCRÍBETE</a>
-          <a href="#" class="text-gray-800 hover:text-blue-600">KIT DEL CORREDOR</a>
-          <a href="#" class="text-gray-800 hover:text-blue-600">CONVOCATORIA</a>
-        </div>
-  
-        <!-- Botón de menú para móviles -->
-        <div class="md:hidden">
-          <button
-            id="menu-toggle"
-            type="button"
-            class="text-gray-800 hover:text-blue-600 focus:outline-none"
-            
-          >
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="hamgurger">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+<nav class="w-full z-50 max-md:w-100 ">
+  <div class="mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <!-- <div class="flex-shrink-0 text-xl font-bold text-blue-600">
+        Carrera
+      </div> -->
+      <!-- Menu Desktop -->
+      <div class="hidden md:flex space-x-8">
 
-            <svg class="h-6 w-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="hamburger-close">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
+        <a href="/correconhistoria/">INICIO</a>
+        <a href="/correconhistoria/carrera">LA CARRERA</a>
+        <a href="#">INSCRÍBETE</a>
+        <a href="#">KIT DEL CORREDOR</a>
+        <a href="#">CONVOCATORIA</a>
+        
+      </div>
+
+      <!-- Botón de menú para móviles -->
+      <div class="md:hidden">
+        <button
+          id="menu-toggle"
+          type="button"
+          class="text-gray-800 hover:text-blue-600 focus:outline-none"
+          
+        >
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="hamgurger">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+
+          <svg class="h-6 w-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="hamburger-close">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
       </div>
     </div>
-  
-    <!-- Menú móvil -->
-    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
-      <a href="#" class="block text-gray-800 hover:text-blue-600">INICIO</a>
-      <a href="#" class="block text-gray-800 hover:text-blue-600">LA CARRERA</a>
-      <a href="#" class="block text-gray-800 hover:text-blue-600">INSCRÍBETE</a>
-      <a href="#" class="block text-gray-800 hover:text-blue-600">KIT DEL CORREDOR</a>
-      <a href="#" class="block text-gray-800 hover:text-blue-600">CONVOCATORIA</a>
-    </div>
-  
-    <script>
-        const toggle = document.getElementById('menu-toggle');
-        const menu = document.getElementById('mobile-menu');
-        
-        toggle?.addEventListener('click', () => {
-        menu?.classList.toggle('hidden');
-        });
+  </div>
 
-        const hamburger = document.getElementById('hamgurger');
-        const hamburgerClose = document.getElementById('hamburger-close');
+  <!-- Menú móvil -->
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+    <a href="#" class="block text-gray-800 hover:text-blue-600">INICIO</a>
+    <a href="#" class="block text-gray-800 hover:text-blue-600">LA CARRERA</a>
+    <a href="#" class="block text-gray-800 hover:text-blue-600">INSCRÍBETE</a>
+    <a href="#" class="block text-gray-800 hover:text-blue-600">KIT DEL CORREDOR</a>
+    <a href="#" class="block text-gray-800 hover:text-blue-600">CONVOCATORIA</a>
+  </div>
 
-        toggle?.addEventListener('click', () => {
-            hamburger?.classList.toggle('hidden');
-            hamburgerClose?.classList.toggle('hidden');
-        });
-    </script>
-  </nav>
-  
+  <script>
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+      
+      toggle?.addEventListener('click', () => {
+      menu?.classList.toggle('hidden');
+      });
+
+      const hamburger = document.getElementById('hamgurger');
+      const hamburgerClose = document.getElementById('hamburger-close');
+
+      toggle?.addEventListener('click', () => {
+          hamburger?.classList.toggle('hidden');
+          hamburgerClose?.classList.toggle('hidden');
+      });
+  </script>
+
+  <style>
+    a {
+      color: white;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-weight: 500;
+    }
+
+    a:hover {
+      color: #0192a3;
+    }
+  </style>
+</nav>
