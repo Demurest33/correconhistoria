@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   site: "https://Demurest33.github.io",
-  base: "/correconhistoria",
+  base: "/",
 
   vite: {
     plugins: [tailwindcss()],
