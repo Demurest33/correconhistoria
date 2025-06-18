@@ -1,5 +1,6 @@
 ---
-import "../styles/global.css";
+import astroConfig from "../../astro.config.mjs";
+const { base } = astroConfig;
 ---
 
 
@@ -11,12 +12,11 @@ import "../styles/global.css";
       </div> -->
       <!-- Menu Desktop -->
       <div class="hidden md:flex space-x-8">
-
-        <a href="/correconhistoria/">INICIO</a>
-        <a href="/correconhistoria/carrera">LA CARRERA</a>
-        <a href="#">INSCRÍBETE</a>
-        <a href="#">KIT DEL CORREDOR</a>
-        <a href="#">CONVOCATORIA</a>
+        <a href={`${base}/`}>INICIO</a>
+        <a href={`${base}/carrera`}>LA CARRERA</a>
+        <a href={`${base}/inscribete`}>INSCRÍBETE</a>
+        <a href={`${base}/kit-del-corredor`}>KIT DEL CORREDOR</a>
+        <a href={`${base}/convocatoria`}>CONVOCATORIA</a>
         
       </div>
 
