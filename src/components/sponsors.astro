@@ -1,5 +1,4 @@
 ---
-import "../styles/global.css";
 import amsed from '../assets/logo-amsed.png';
 import asadero from '../assets/logo-asadero.png';
 import fofel from '../assets/logo-fofel.png';
@@ -7,7 +6,7 @@ import metamedix from '../assets/logo-metamedix.png';
 import Image from "astro/components/Image.astro";
 const logos = [amsed, metamedix, fofel, asadero];
 ---
-<div class="sponsor-ticker">
+<div class="sponsor-ticker ">
   <ul>
     {logos.map((logo) => (
       <li><Image src={logo} alt="sponsor" class="logo" /></li>
@@ -26,7 +25,6 @@ const logos = [amsed, metamedix, fofel, asadero];
     overflow: hidden;
     display: flex;
     gap: var(--gap);
-    padding-block: 1rem;
     background-color: white;
     border-top: 1px solid #e5e7eb;
     border-bottom: 1px solid #e5e7eb;

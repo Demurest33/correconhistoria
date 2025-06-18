@@ -1,5 +1,4 @@
 ---
-import "../styles/global.css";
 import Layout from '../layouts/Layout.astro';
 import Navbar from "../components/Navbar.astro";
 import ninia from '../assets/ninia.png';
@@ -8,85 +7,81 @@ import Image from "astro/components/Image.astro";
   <Layout>
 
     <Navbar />
-    <div class="flex items-center justify-center">
-      <div class="">
-        <p class="text-cyan-400 text-9xl font-bold my-4">La carrera</p>
-        <p class="text-white text-3xl max-w-6xl ">
-          Cada carrera tiene un significado, cada paso conecta cuerpo, mente y corazón.
-        </p>
-        <br>
-        <p class="text-white text-3xl max-w-6xl">
-          Nuestro objetivo es promover el bienestar físico y emocional mientras fortalecemos el lazo con nuestra identidad y nuestra tierra.
-        </p>
-        <br>
+      <p class="text-cyan-400 text-5xl md:text-9xl font-bold my-4">La carrera</p>
+      <p class="text-white text-xl md:text-3xl max-w-6xl ">
+        Cada carrera tiene un significado, cada paso conecta cuerpo, mente y corazón.
+      </p>
+      <br>
+      <p class="text-white text-xl md:text-3xl max-w-6xl">
+        Nuestro objetivo es promover el bienestar físico y emocional mientras fortalecemos el lazo con nuestra identidad y nuestra tierra.
+      </p>
+      <br>
 
-        <h2 class="text-cyan-400 text-7xl font-bold my-4">Categorías</h2>
+      <h2 class="text-cyan-400 text-4xl md:text-7xl font-bold my-4">Categorías</h2>
 
-        <div class="flex">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 text-white w-1/2 max-h-16">
-            <div class="p-4 rounded-lg shadow-md card">
-              <h3 class="text-xl font-semibold opacity-100">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-                </svg>
-                Estudiantil A</h3>
-              <p>              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <div class="flex">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 text-white w-1/2 max-h-16 max-sm:w-full">
+          <div class="p-4 rounded-lg shadow-md card">
+            <h3 class="text-xl font-semibold opacity-100">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-              </svg> 12 a 14 años</p>
-            </div>
+              </svg>
+              Estudiantil A</h3>
+            <p>              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
+            </svg> 12 a 14 años</p>
+          </div>
 
-            <div class="p-4 rounded-lg shadow-md card">
-              <h3 class="text-xl font-semibold opacity-100">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-                </svg>
-                Estudiantil A</h3>
-              <p>              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div class="p-4 rounded-lg shadow-md card">
+            <h3 class="text-xl font-semibold opacity-100">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-              </svg> 12 a 14 años</p>
-            </div>
+              </svg>
+              Estudiantil A</h3>
+            <p>              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
+            </svg> 12 a 14 años</p>
+          </div>
 
-            <div class="p-4 rounded-lg shadow-md card">
-              <h3 class="text-xl font-semibold opacity-100">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-                </svg>
-                Estudiantil A</h3>
-              <p>              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div class="p-4 rounded-lg shadow-md card">
+            <h3 class="text-xl font-semibold opacity-100">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-              </svg> 12 a 14 años</p>
-            </div>
+              </svg>
+              Estudiantil A</h3>
+            <p>              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
+            </svg> 12 a 14 años</p>
+          </div>
 
-            
-            <div class="p-4 rounded-lg shadow-md card">
-              <h3 class="text-xl font-semibold opacity-100">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-                </svg>
-                Estudiantil A</h3>
-              <p>              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          
+          <div class="p-4 rounded-lg shadow-md card">
+            <h3 class="text-xl font-semibold opacity-100">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-              </svg> 12 a 14 años</p>
-            </div>
+              </svg>
+              Estudiantil A</h3>
+            <p>              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
+            </svg> 12 a 14 años</p>
+          </div>
 
-            
-            <div class="p-4 rounded-lg shadow-md card">
-              <h3 class="text-xl font-semibold opacity-100">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-                </svg>
-                Estudiantil A</h3>
-              <p>              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          
+          <div class="p-4 rounded-lg shadow-md card">
+            <h3 class="text-xl font-semibold opacity-100">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-              </svg> 12 a 14 años</p>
-            </div>
-        </div>
+              </svg>
+              Estudiantil A</h3>
+            <p>              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
+            </svg> 12 a 14 años</p>
+          </div>
+      </div>
 
-        <div class="w-1/2" style="margin-top: -200px;">
-          <Image src={ninia} alt="Niña corriendo" height={700} />
-        </div>
-        </div>
-    </div>    
+      <div class="w-1/2 max-sm:hidden" style="margin-top: -180px;">
+        <Image src={ninia} alt="Niña corriendo" height={700} />
+      </div>
   </Layout>
 
 
@@ -99,5 +94,12 @@ import Image from "astro/components/Image.astro";
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
       max-height: 100px; /* Altura máxima */
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        max-height: 200px;
+        padding: 10px;
+      }
     }
   </style>

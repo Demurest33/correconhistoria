@@ -1,7 +1,5 @@
 ---
-import "../styles/global.css";
 import Layout from '../layouts/Layout.astro';
-import famlia from '../assets/familia.png';
 import Sponsors from "../components/sponsors.astro";
 import Timer from "../components/Timer.astro";
 import Navbar from '../components/Navbar.astro';
@@ -13,27 +11,32 @@ import Hero from '../assets/hero.png';
 	<section>
 		<Navbar/>
 
-		<div class="grid grid-cols-1 md:grid-cols-2 p-0 ">
-		  <div class="flex flex-col justify-center items-center ">
-
-			<div class=" flex flex-col self-end w-4/5">
-				<h1 class="text-8xl font-bold m-0 text-border"> 
-					<span style="color: #ff398f">Corre</span> 
-					<span style="color: #00bec1">con</span> 
-					<span class="text-9xl ml-8" style="color: #016692;">HISTORIA</span>
+		<div class="grid grid-cols-1 md:grid-cols-2 px-4 py-10 gap-8 items-center">
+			<!-- Contenido -->
+			<div class="flex flex-col justify-center items-center order-2 md:order-1">
+			  <div class="w-full md:w-4/5 text-center md:text-left">
+				<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-border leading-tight">
+				  <span style="color: #ff398f">Corre</span>
+				  <span style="color: #00bec1" class="ml-2">con</span>
+				  <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl mt-2 md:ml-8" style="color: #016692;">HISTORIA</span>
 				</h1>
-
-				<p class="mt-2 text-4xl text-center text-white font-medium">Una carrera para toda la familia. Conectando el cuerpo con nuestras raíces.</p>
-				<button style="background-color: #0192a3" class="mt-5 p-3 text-white rounded-3xl max-w-xs" >
-					<p class="text-3xl font-medium">Inscríbete ahora</p>
-				</button>	
+		  
+				<p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl text-white font-medium">
+				  Una carrera para toda la familia. Conectando el cuerpo con nuestras raíces.
+				</p>
+		  
+				<button class="mt-6 px-6 py-3 text-white text-lg sm:text-xl font-medium rounded-3xl" style="background-color: #0192a3">
+				  Inscríbete ahora
+				</button>
+			  </div>
 			</div>
-
+		  
+			<!-- Imagen -->
+			<div class="order-1 md:order-2">
+			  <img src={Hero.src} alt="Familia" class="w-full h-auto max-h-[500px] object-contain mx-auto" />
+			</div>
 		  </div>
-		  <div>
-			<img src={Hero.src} alt="Familia" class="max-w-full w-2xl max-h-full" />
-		  </div>
-		</div>
+		  
 
 
 	  </section>

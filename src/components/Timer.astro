@@ -1,41 +1,43 @@
----
-import '../styles/global.css'
----
 
-<div class="flex items-center justify-center bg-white ">
-  <div class="text-center">
-    <pre class="text-5xl my-4 font-semibold" style="color: #05d6d2">Octubre 11 2025</pre>
-    
-    <div id="countdown" class="text-4xl font-mono flex justify-evenly gap-12" style="color: #05d6d2">
-        <div class="flex flex-col">
-            <span id="days" class="px-2">00</span>
-            <span>Días</span>
+
+<div class="flex items-center justify-center bg-white px-4 py-8">
+    <div class="text-center w-full max-w-5xl">
+      <!-- Fecha -->
+      <pre class="text-3xl sm:text-4xl md:text-5xl my-4 font-semibold" style="color: #05d6d2">Octubre 11 2025</pre>
+  
+      <!-- Countdown -->
+      <div id="countdown"
+            class="text-2xl sm:text-3xl md:text-5xl font-mono flex sm:flex-row justify-evenly items-center gap-6 sm:gap-12 my-6"
+           style="color: #05d6d2">
+        <div class="flex flex-col items-center">
+          <span id="days" class="px-2">00</span>
+          <span class="text-xl sm:text-base">Días</span>
         </div>
-
-        <div class="flex flex-col">
-            <span id="hours" class="px-2">00</span>
-            <span>Horas</span>
-        </div>  
-        
-        <div class="flex flex-col">
-            <span id="minutes" class="px-2">00</span>
-            <span>Minutos</span>
-        </div>  
-        
-        <div class="flex flex-col">
-            <span id="seconds" class="px-2">00</span>
-            <span>Segundos</span>
-        </div>  
+  
+        <div class="flex flex-col items-center">
+          <span id="hours" class="px-2">00</span>
+          <span class="text-xl sm:text-base">Horas</span>
+        </div>
+  
+        <div class="flex flex-col items-center">
+          <span id="minutes" class="px-2">00</span>
+          <span class="text-xl sm:text-base">Minutos</span>
+        </div>
+  
+        <div class="flex flex-col items-center">
+          <span id="seconds" class="px-2">00</span>
+          <span class="text-xl sm:text-base">Segundos</span>
+        </div>
+      </div>
+  
+      <!-- Frase -->
+      <div class="font-bold my-12 text-amber-600 px-2">
+        <p class="text-4xl sm:text-4xl md:text-6xl lg:text-8xl leading-tight">Más allá del límite.</p>
+        <p class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight">Más allá del tiempo.</p>
+      </div>
     </div>
-
-    <div class="font-bold my-12 text-amber-600">
-        <p class="text-8xl">Más allá del limite.</p>
-        <p class="text-7xl">Más allá del tiempo.</p>
-    </div>
-
   </div>
-</div>    
-
+  
 <!-- ajustar el reloj si la carrera inicia el 11 de Octubre del 2025 -->
 
 <script>
