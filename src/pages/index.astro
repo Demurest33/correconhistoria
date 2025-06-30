@@ -5,9 +5,17 @@ import Timer from "../components/Timer.astro";
 import Navbar from '../components/Navbar.astro';
 import Socials from "../components/Socials.astro";
 import Hero from '../assets/hero.png';
+import fondo_index from '../assets/fondo_index.png';
+import mensaje_inicio from '../assets/mensaje_inicio.png';
+import Image from 'astro/components/Image.astro';
+
 ---
 
-<Layout>
+<Layout
+	title="Corre con Historia - Inicio"
+	description="Una carrera para toda la familia. Conectando el cuerpo con nuestras raíces."
+	bgImage={fondo_index.src}
+>
 	<section>
 		<Navbar/>
 
@@ -25,20 +33,21 @@ import Hero from '../assets/hero.png';
 				  Una carrera para toda la familia. Conectando el cuerpo con nuestras raíces.
 				</p>
 		  
-				<button class="mt-6 px-6 py-3 text-white text-lg sm:text-xl font-medium rounded-3xl" style="background-color: #0192a3">
-				  Inscríbete ahora
-				</button>
+				<button 
+				class="mt-6 px-6 py-3 text-white text-lg sm:text-xl font-medium rounded-3xl bg-[#0192a3] shadow-lg hover:bg-[#017b89] transition duration-300 ease-in-out cursor-pointer"
+			  >
+				Inscríbete ahora
+			  </button>
+			  
 			  </div>
 			</div>
 		  
 			<!-- Imagen -->
-			<div class="order-1 md:order-2">
+			<div class="order-1 md:order-2 max-sm:hidden">
 			  <img src={Hero.src} alt="Familia" class="w-full h-auto max-h-[500px] object-contain mx-auto" />
 			</div>
 		  </div>
-		  
-
-
+		
 	  </section>
 </Layout>
 
@@ -48,7 +57,9 @@ import Hero from '../assets/hero.png';
 
 <section>
 	<Timer />
+	<Image src={mensaje_inicio} alt="Corre con Historia" class="mx-auto w-full max-h-2/3" />
 </section>
+
 
 <section>
 	<Socials />

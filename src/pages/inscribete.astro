@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from "../components/Navbar.astro";
+import inscribete_seniora from "../assets/inscribete_seniora.png";
+import Image from "astro/components/Image.astro";
+import fondo_inscribete from '../assets/fondo_inscribete.png';
+---
+<Layout
+  title="Corre con Historia - Inscríbete"
+  description="¡Únete a la carrera y corre con historia! Inscríbete ahora y sé parte de este evento único."
+  bgImage={fondo_inscribete.src}
+  cover={false}
+>
+  <Navbar />
+
+  <div class="flex flex-col sm:flex-row">
+    <section class="w-full sm:w-1/2 p-4">
+      <p class="text-cyan-400 text-6xl md:text-9xl font-bold my-4">Inscríbete</p>
+      <p class="text-white text-xl sm:text-5xl max-w-6xl font-semibold">
+        ¡Únete a la carrera y corre con historia!
+      </p>
+
+      <button class="my-8 sm:my-16">
+        <a href="#" class="mt-0 px-6 py-3 text-white text-2xl sm:text-4xl font-medium rounded-2xl border-2 border-white" style="background-color: #f0005e;">
+          Inscríbete ahora
+        </a>
+      </button>
+
+      <div class="w-full gap-4 mt-2 text-white">
+        <div class="p-4 rounded-lg shadow-md card flex flex-col gap-4  sm:text-2xl">
+          <div class="flex items-center sm:text-3xl">
+            <ion-icon name="calendar-outline" class="sm:text-5xl mr-3 text-amber-500"></ion-icon>
+            <p>Fecha y hora del evento</p>
+          </div>
+
+          <div class="flex items-center sm:text-3xl">
+            <ion-icon name="location-outline" class="sm:text-5xl mr-3 text-amber-500"></ion-icon> 
+            <p>Ubicación del evento</p>
+          </div>
+
+          <!-- Costo -->
+          <div class="flex items-center sm:text-3xl ">
+            <ion-icon name="receipt-outline" class="sm:text-5xl mr-3 text-amber-500"></ion-icon>
+            <p>Costo de la inscripción</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="w-[300px] sm:w-[500px] flex justify-center items-center">
+      <Image src={inscribete_seniora} alt="Niña corriendo" />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .card {
+    background-color: rgba(0, 0, 0, 0.38);
+    color: #fff;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      max-height: 200px;
+      padding: 10px;
+    }
+  }
+</style>

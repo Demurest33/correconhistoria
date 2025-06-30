@@ -3,8 +3,16 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from "../components/Navbar.astro";
 import ninia from '../assets/ninia.png';
 import Image from "astro/components/Image.astro";
+import fondo_carrera from '../assets/fondo_carrera.png';
+import Categoria from '../components/Categoria.astro';
+import ruta from '../assets/ruta.png';
+import miniatura_yt from '../assets/miniatura_yt.png';
 ---
-  <Layout>
+  <Layout
+    title="Corre con Historia - La Carrera"
+    description="Cada carrera tiene un significado, cada paso conecta cuerpo, mente y corazón. Nuestro objetivo es promover el bienestar físico y emocional mientras fortalecemos el lazo con nuestra identidad y nuestra tierra."
+    bgImage={fondo_carrera.src}
+  >
 
     <Navbar />
       <p class="text-cyan-400 text-5xl md:text-9xl font-bold my-4">La carrera</p>
@@ -19,87 +27,76 @@ import Image from "astro/components/Image.astro";
 
       <h2 class="text-cyan-400 text-4xl md:text-7xl font-bold my-4">Categorías</h2>
 
-      <div class="flex">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 text-white w-1/2 max-h-16 max-sm:w-full">
-          <div class="p-4 rounded-lg shadow-md card">
-            <h3 class="text-xl font-semibold opacity-100">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-              </svg>
-              Estudiantil A</h3>
-            <p>              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-            </svg> 12 a 14 años</p>
-          </div>
+      <div>
+        <div class="flex">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 text-white w-1/2 sm:max-h-16 max-sm:w-full my-3">
+            <Categoria title="Estudiantil A" age="12 a 14 años" />
+            <Categoria title="Estudiantil B" age="15 a 17 años" />
+            <Categoria title="Libre" age="18 a 29 años" iconName="accessibility-outline" />
+            <Categoria title="Master" age="30 a 39 años" iconName="star"/>
+            <Categoria title="Veterano" age="55 años y más" iconName="medal"/>
+        </div>
 
-          <div class="p-4 rounded-lg shadow-md card">
-            <h3 class="text-xl font-semibold opacity-100">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-              </svg>
-              Estudiantil A</h3>
-            <p>              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-            </svg> 12 a 14 años</p>
-          </div>
+        <div class="w-[150px] sm:w-[350px] max-sm:hidden mt-[-100px]">
+          <Image src={ninia} alt="Niña corriendo" />
+        </div>
 
-          <div class="p-4 rounded-lg shadow-md card">
-            <h3 class="text-xl font-semibold opacity-100">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-              </svg>
-              Estudiantil A</h3>
-            <p>              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-            </svg> 12 a 14 años</p>
-          </div>
-
-          
-          <div class="p-4 rounded-lg shadow-md card">
-            <h3 class="text-xl font-semibold opacity-100">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-              </svg>
-              Estudiantil A</h3>
-            <p>              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-            </svg> 12 a 14 años</p>
-          </div>
-
-          
-          <div class="p-4 rounded-lg shadow-md card">
-            <h3 class="text-xl font-semibold opacity-100">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-              </svg>
-              Estudiantil A</h3>
-            <p>              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7.002 7.002 0 00-6.32 4.5A10.001 10.001 0 0112 22a10.001 10.001 0 016.32-3.5A7.002 7.002 0 0012 14z" />
-            </svg> 12 a 14 años</p>
-          </div>
       </div>
+      <div>
+        <h2 class="text-cyan-400 text-4xl md:text-7xl font-bold my-1">Ruta</h2>
+        
+        <div class="rounded-lg shadow-lg p-2 flex gap-3 items-center w-fit">
+          <!-- Imagen que abre el modal con la imagen -->
+          <Image 
+            src={ruta} 
+            alt="Ruta de la carrera" 
+            class="w-auto h-[200px] rounded-xl cursor-pointer hover:brightness-90 transition" 
+            onclick="document.getElementById('modalRuta').classList.remove('hidden')"
+          />
+        
+          <!-- Imagen que abre el modal con el video -->
+          <Image 
+            src={miniatura_yt} 
+            alt="Miniatura de video" 
+            class="w-auto h-[200px] rounded-xl cursor-pointer hover:brightness-90 transition"
+            onclick="document.getElementById('modalVideo').classList.remove('hidden')"
+          />
+        </div>
+        
+        <!-- Modal de imagen -->
+        <div id="modalRuta" class="hidden fixed inset-0 z-50 flex items-center justify-center" style="background-color: rgba(0, 0, 0, 0.8);">
+          <div class="relative max-w-5xl w-[90%]" onclick="event.stopPropagation()">
+            <button 
+              class="absolute top-2 right-2 text-white text-3xl font-bold" 
+              onclick="document.getElementById('modalRuta').classList.add('hidden')"
+            >
+              &times;
+            </button>
+            <img src={ruta.src} alt="Ruta ampliada" class="w-full h-auto rounded-xl shadow-lg" />
+          </div>
+        </div>
+        
+        <!-- Modal de video -->
+        <div id="modalVideo" class="hidden fixed inset-0 z-50 flex items-center justify-center" style="background-color: rgba(0, 0, 0, 0.8);">
+          <div class="relative max-w-5xl w-[90%] aspect-video" onclick="event.stopPropagation()">
+            <button 
+              class="absolute top-2 right-2 text-white text-3xl font-bold z-10" 
+              onclick="document.getElementById('modalVideo').classList.add('hidden')"
+            >
+              &times;
+            </button>
+            <iframe class="w-full h-full rounded-xl shadow-lg" src="https://www.youtube.com/embed/woW_Y8-s-Ks?si=5GdbzD50Unx2CezS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+        
+        <script>
+          document.addEventListener('click', function(event) {
+            // si el modal esta visible y se hace click fuera del modal, se cierra
+            if (event.target.id === 'modalRuta' || event.target.id === 'modalVideo') {
+              event.target.classList.add('hidden');
+            }
+          });
+        </script>
 
-      <div class="w-1/2 max-sm:hidden" style="margin-top: -180px;">
-        <Image src={ninia} alt="Niña corriendo" height={700} />
       </div>
   </Layout>
-
-
-  <style>
-    .card {
-      background-color: rgba(0, 0, 0, 0.458); /* Fondo azul */
-      color: #fff; /* Texto blanco */
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-      max-height: 100px; /* Altura máxima */
-    }
-
-    @media (max-width: 768px) {
-      .card {
-        max-height: 200px;
-        padding: 10px;
-      }
-    }
-  </style>

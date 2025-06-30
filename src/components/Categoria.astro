@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+const { title, age, iconName="person-outline"} = Astro.props;
+---
+
+<div class="p-4 rounded-lg shadow-md card flex">
+    <ion-icon name={iconName} class="sm:text-2xl mr-3 mt-1 text-cyan-400"></ion-icon>
+    <div>
+        <h3 class="text-xl font-semibold opacity-100">
+            {title}
+        </h3>
+        <p class="text">{age}</p>
+    </div>
+</div>
+
+<style>
+    .card {
+      background-color: rgba(0, 0, 0, 0.458); /* Fondo azul */
+      color: #fff; /* Texto blanco */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      max-height: 100px; /* Altura máxima */
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        max-height: 200px;
+        padding: 10px;
+      }
+    }
+  </style>
