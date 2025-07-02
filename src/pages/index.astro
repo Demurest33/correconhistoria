@@ -8,7 +8,7 @@ import Hero from '../assets/hero.png';
 import fondo_index from '../assets/fondo_index.png';
 import mensaje_inicio from '../assets/mensaje_inicio.png';
 import Image from 'astro/components/Image.astro';
-
+import letras from '../assets/letras.png';
 ---
 
 <Layout
@@ -23,11 +23,12 @@ import Image from 'astro/components/Image.astro';
 			<!-- Contenido -->
 			<div class="flex flex-col justify-center items-center order-2 md:order-1">
 			  <div class="w-full md:w-4/5 text-center md:text-left">
-				<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-border leading-tight">
+				<!-- <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-border leading-tight">
 				  <span style="color: #ff398f">Corre</span>
 				  <span style="color: #00bec1" class="ml-2">con</span>
 				  <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl mt-2 md:ml-8" style="color: #016692;">HISTORIA</span>
-				</h1>
+				</h1> -->
+				<Image src={letras} alt="Corre con Historia" class="w-full max-w-3xl mx-auto mb-4" />
 		  
 				<p class="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl text-white font-medium">
 				  Una carrera para toda la familia. Conectando el cuerpo con nuestras raíces.
@@ -43,7 +44,7 @@ import Image from 'astro/components/Image.astro';
 			</div>
 		  
 			<!-- Imagen -->
-			<div class="order-1 md:order-2 max-sm:hidden">
+			<div class="order-1 md:order-2 max-md:hidden">
 			  <img src={Hero.src} alt="Familia" class="w-full h-auto max-h-[500px] object-contain mx-auto" />
 			</div>
 		  </div>
